@@ -7,14 +7,20 @@
       http-equiv="Content-Security-Policy"
       content="script-src 'self' 'unsafe-inline';"
     />
+    <link rel="stylesheet" href="./addToDo.css" />
   </head>
   <body style="background: white">
-    <p>Yapılacak Ekle</p>
+    <header class="header-add-window">
+      <p class="text-center">Yapılacak Bir Şey Ekle</p>
+    </header>
     <div>
       <form>
-        <label>Yapılması Gereken:</label>
-        <input type="text" id="item" autofocus />
-        <button type="submit">Ekle</button>
+        <div class="input-group">
+          <input type="text" class="form-control outlined-input" id="item" placeholder="Yeni Yapılacak Giriniz">
+          <div class="input-group-append">
+            <button class="btn btn-outline-success" type="submit">Button</button>
+          </div>
+        </div>
       </form>
     </div>
     <script src="./addToDo.js"></script>

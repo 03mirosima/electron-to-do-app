@@ -1,0 +1,22 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+.header-add-window {
+  padding: 15px;
+  background-color: rgb(169, 216, 161);
+  margin-bottom: 15px;
+}
+p {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.outlined-input {
+  border: 1px solid #28a745;
+}
+
+.input-group {
+  padding: 20px;
+}
+.outlined-input:focus{
+    box-shadow: none;
+}

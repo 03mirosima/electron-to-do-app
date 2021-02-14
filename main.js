@@ -1,17 +1,16 @@
 const { app, BrowserWindow, Menu, ipcMain } = require("electron");
 
+
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
       nodeIntegration: true,
-      /*  worldSafeExecuteJavaScript: true,
-      contextIsolation: true */
     },
   });
 
-  mainWindow.loadFile("index.html");
+  mainWindow.loadFile("./app/main-window/index.html");
 
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
   Menu.setApplicationMenu(mainMenu);
@@ -22,13 +21,11 @@ app.whenReady().then(createWindow);
 
 function createAddWindow() {
   addWindow = new BrowserWindow({
-    width: 300,
-    height: 300,
+    width: 500,
+    height: 500,
     title: "Yapılacak Ekle",
     webPreferences: {
       nodeIntegration: true,
-      /*  worldSafeExecuteJavaScript: true,
-      contextIsolation: true */
     },
   });
   addWindow.loadFile("./app/addToDo/addWindow.html");
@@ -66,9 +63,9 @@ const mainMenuTemplate = [
       },
       {
         label: "Tüm Yapılacakaları Temizle",
-        click(){
-          mainWindow.webContents.send("item:clear")
-        }
+        click() {
+          mainWindow.webContents.send("item:clear");
+        },
       },
       {
         label: "Uygulamayı Kapat",
